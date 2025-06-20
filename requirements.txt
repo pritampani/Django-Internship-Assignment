@@ -1,0 +1,9 @@
+Django
+ djangorestframework
+ python-decouple
+ dj-database-url
+ celery
+ redis
+ python-telegram-bot
+ requests
+djangorestframework-authtoken
