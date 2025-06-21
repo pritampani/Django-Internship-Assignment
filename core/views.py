@@ -30,8 +30,10 @@ class ProtectedView(APIView):
     def get(self, request):
         return Response({"message": "Hello from Protected API!", "user": request.user.username})
 class RegisterView(APIView):
+    permission_classes = [AllowAny]
 
-    pass
+    def post(self, request):
+        pass
 
 class TelegramWebhookView(APIView):
 
