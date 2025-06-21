@@ -24,8 +24,11 @@ class PublicView(APIView):
 
 
 class ProtectedView(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
-    pass
+    def get(self, request):
+        return Response({"message": "Hello from Protected API!", "user": request.user.username})
 class RegisterView(APIView):
 
     pass
