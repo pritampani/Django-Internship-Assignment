@@ -1,3 +1,9 @@
+"""Asynchronous task to send a welcome email.
+Keeps registration or any other trigger point non-blocking and fast.
+Uses Celery + Redis (broker) for task handling.
+Logs success/failure for debugging and monitoring."""
+
+
 from celery import shared_task
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
