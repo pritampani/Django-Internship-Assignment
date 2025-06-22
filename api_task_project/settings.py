@@ -1,5 +1,5 @@
 """
-Django settings for job_portal project.
+Django settings for api_task_project project.
 
 Production-ready configuration using python-decouple, dj-database-url, Celery, Redis, and secure headers.
 """
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'job_portal.urls'
+ROOT_URLCONF = 'api_task_project.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'job_portal.wsgi.application'
+WSGI_APPLICATION = 'api_task_project.wsgi.application'
 
 
 # Database
