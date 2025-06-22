@@ -8,7 +8,12 @@ from celery import shared_task
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 import logging
+from django.conf import settings
+from typing import TYPE_CHECKING
+from django.contrib.auth import get_user_model
 
+if TYPE_CHECKING:
+    from django.contrib.auth.models import User
 logger = logging.getLogger(__name__)
 
 @shared_task(bind=True)
@@ -17,9 +22,9 @@ def send_welcome_email(self, user_id):
     try:
         user = User.objects.get(pk=user_id)
         send_mail(
-            subject='Welcome to Job Portal',
-            message=f'Hello {user.username}, welcome to Job Portal!',
-            from_email=None,
+            subject='Welcome to django internship',
+            message=f'Hello {user.username}, welcome to django internship!',
+            from_email=settings.EMAIL_HOST_USER,
             recipient_list=[user.email],
             fail_silently=False,
         )
@@ -28,3 +33,5 @@ def send_welcome_email(self, user_id):
     except Exception as e:
         logger.error(f"Failed to send welcome email to user_id {user_id}: {e}")
         return f"Failed to send email: {e}" 
+    
+
