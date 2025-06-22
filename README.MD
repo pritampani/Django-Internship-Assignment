@@ -17,7 +17,7 @@ A production-ready Django project for a job portal, featuring RESTful APIs, user
 1. **Clone the repository:**
    ```bash
    git clone <your-repo-url>
-   cd job_portal
+   cd Django Internship 
    ```
 2. **Create a virtual environment:**
    ```bash
@@ -71,7 +71,7 @@ All sensitive and environment-specific settings are managed via `.env` using `py
    ```
 3. **Start Celery worker:**
    ```bash
-   celery -A job_portal worker -l info
+   celery -A Django Internship  worker -l info
    ```
 
 ## API Endpoints
@@ -143,7 +143,7 @@ All sensitive and environment-specific settings are managed via `.env` using `py
    ```
 2. **Start Celery worker:**
    ```bash
-   celery -A job_portal worker -l info
+   celery -A Django Internship  worker -l info
    ```
 3. **Test email task:**
    - Register a new user via the API. Check the console for the welcome email output.
@@ -157,4 +157,4 @@ For any issues, please open an issue or contact the maintainer.
 
 pip --version 
 
-python3 -m django startproject job_portal . 
+python3 -m django startproject Django Internship  . 
