@@ -1,4 +1,4 @@
-# Job Portal
+# Django Internship 
 
 ## Project Overview
 A production-ready Django project for a job portal, featuring RESTful APIs, user registration with token authentication, Celery-powered background tasks, and Telegram bot integration. Built with best practices for security, modularity, and maintainability.
